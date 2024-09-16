@@ -16,4 +16,4 @@ console.log(0 || '0' && 1); // отримуємо один, тому що при
 console.log((+null == false) < 1); // отримуємо булеве значення false, тому що одиниця не більша за одиницю
 console.log(false && true || true); // отримуємо true, тому що оператор || виводить true в такому виразі: false || true
 console.log(false && (false || true)); // оримуємо false, тому що false && true дає нам false
-console.log((+null == false) < 1 ** 5); // отримуємо булеве значення false, тому що одиниця не більша за одиницю 
+console.log((+null == false) < 1 ** 5); // отримуємо булеве значення false, тому що одиниця не більша за одиницю
