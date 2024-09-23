@@ -26,4 +26,4 @@ let num_neparne = 0;
         return Math.floor(Math.random() * (max - min + 1) + min); 
       }
 
-      console.log(checkProbabilityTheory(4));
+      console.log("Співвідношення парних чисел до непарних " + checkProbabilityTheory(4));
