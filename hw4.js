@@ -1,21 +1,21 @@
 
-let num_p = 0;
-let num_n = 0;
+let num_parne = 0;
+let num_neparne = 0;
 
   function checkProbabilityTheory(count){
     for(; count > 0; count--){
         if(getRandom(100, 1000) % 2 == 0){
-            num_p++;
+            num_parne++;
         } else {
-            num_n++;
+            num_neparne++;
         }
         }
-        if(num_p === 0){
+        if(num_parne === 0){
             return "Рандомних парних чисел немає";
-        } else if(num_n === 0){
+        } else if(num_neparne === 0){
             return "Рандомних непарних чисел немає";
         } else {
-            return (num_p / num_n) * 100 + "%";
+            return (num_parne / num_neparne) * 100 + "%";
         }
         
   }
