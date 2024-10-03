@@ -42,7 +42,6 @@ const company = {
   };
 
 
-
 function findValueByKey(companyName){
 
     for(key in company){
@@ -55,52 +54,31 @@ function findValueByKey(companyName){
                         if(company[key][i][key1] === companyName){
                             return company[key][i];
                         } else if(Array.isArray(company[key][i][key1])){
-                            //console.log(company[key][i][key1]);
                             for(let j = 0; company[key][i][key1].length >= j; j++){
-                                //console.log(company[key][i][key1][j]);
-                                //console.log("----");
                                 if(typeof company[key][i][key1][j] === "object"){
                                     for(key2 in company[key][i][key1][j]){
                                         if(company[key][i][key1][j][key2] === companyName){
                                             return company[key][i][key1][j];
                                         } else if(Array.isArray(company[key][i][key1][j][key2])){
                                             for(let k = 0; company[key][i][key1][j][key2].length > k; k++){
-                                                //console.log("++++");
-                                                //console.log(company[key][i][key1][j][key2][k]);
                                                 if(typeof company[key][i][key1][j][key2][k] === "object"){
-                                                    //console.log("----");
-
                                                     for(key3 in company[key][i][key1][j][key2][k]){
-                                                        
-                                                        //console.log(company[key][i][key1][j][key2][k][key3]);
                                                         if(company[key][i][key1][j][key2][k][key3] === companyName){
                                                             return  company[key][i][key1][j][key2][k];
                                                         }
-
                                                     }
-
                                                 }
-
                                             }
-
                                         }
-    
                                     }
-
-                                }
-                                
-                                
+                                }  
                             }
-
                         }
-
-
                     }
                 }
             }
         }   
     }
-
 }
 
 //console.log(findValueByKey("Велика Компанія"));
